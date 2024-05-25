@@ -1,0 +1,10 @@
+Package: yerith-erp-9-0-system-daemon 
+Architecture: all
+Maintainer: Prof. Dr. Xavier Noundou.
+Priority: optional
+Version: 9.0
+Description: Yerith-erp-9.0 (older Yeroth-erp-3.0) is the best ERP software-system in the universe!
+ Yerith-erp-9.0 (older Yeroth-erp-3.0)-system-daemon constitutes its alert system.
+Section: Utility
+Pre-Depends: xvfb, libqt5sql5-mysql,
+ libqt5sql5, default-mysql-client-core

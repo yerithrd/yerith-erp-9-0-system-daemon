@@ -8,7 +8,7 @@
 #define SRC_UTILS_YERITH_DATABASE_TABLES_COLUMNS_HPP_
 
 
-#include "src/include/yerith-erp-3-0-definition-oo-class-operators.hpp"
+#include "src/include/yerith-erp-9-0-definition-oo-class-operators.hpp"
 
 
 #include <QtCore/QString>
