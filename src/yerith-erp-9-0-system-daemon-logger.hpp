@@ -1,7 +1,7 @@
 /*
  * yeren-erp-alert-logger.hpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 #ifndef SRC_YERITH_LOGGER_HPP_

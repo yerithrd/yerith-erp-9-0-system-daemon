@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon.cpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 
@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
         QString errMsg
 			("La variable d'environement YERITH_ERP_3_0_PROPERTIES_CONFIGURATION_FOLDER n'a pas de valeur ! \n\n");
 
-        errMsg.append("Contacter PROF. DR.-ENG. DIPL.-INF. Xavier Noundou\n"
+        errMsg.append("Contacter Pr. Prof. Dr. Xavier Noundou\n"
         			  "\t(YERITH.xavier@gmail.com)\n\n"
         			  "Cliquer sur 'Cancel' pour terminer yerith-erp-9-0-system-daemon-3.0");
 
@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
         QString errMsg
         	("La variable d'environement YERITH_ERP_3_0_SYSTEM_DAEMON_HOME_FOLDER n'a pas de valeur ! \n\n");
 
-        errMsg.append("Contacter PROF. DR.-ENG. DIPL.-INF. Xavier Noundou\n"
+        errMsg.append("Contacter Pr. Prof. Dr. Xavier Noundou\n"
         			  "\t(YERITH.xavier@gmail.com)\n\n"
         			  "Cliquer sur 'Cancel' pour terminer yerith-erp-9-0-system-daemon-3.0");
 
@@ -182,7 +182,7 @@ int main(int argc, char *argv[])
                        "ne peut pas se connecter");
 
         errMsg.append(QString(" à un serveur MYSQL externe (%1) !\n\n"
-                              "Contacter PROF. DR.-ENG. DIPL.-INF. Xavier Noundou\n"
+                              "Contacter Pr. Prof. Dr. Xavier Noundou\n"
                               "\t(YERITH.xavier@gmail.com)\n\n"
                               "Cliquer sur 'Cancel' pour terminer YERITH-PGI-3.0").
                       arg(database.db_ip_address()));
@@ -202,7 +202,7 @@ int main(int argc, char *argv[])
 
         errMsg.append(QObject::trUtf8("Serveur de base de données: %1.\n\n"
         							  "Dernière erreur (%2).\n\n"
-                         	 	 	  "Contacter PROF. DR.-ENG. DIPL.-INF. Xavier Noundou\n"
+                         	 	 	  "Contacter Pr. Prof. Dr. Xavier Noundou\n"
                          	 	 	  "\t(YERITH.xavier@gmail.com)\n\n"
                          	 	 	  "Cliquer sur 'Cancel' pour terminer YERITH-PGI-3.0")
                       	  	  .arg(database.db_ip_address(),

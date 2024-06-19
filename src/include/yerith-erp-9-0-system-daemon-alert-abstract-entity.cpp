@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 

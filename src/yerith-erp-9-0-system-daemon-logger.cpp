@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-logger.cpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 #include "yerith-erp-9-0-system-daemon-logger.hpp"

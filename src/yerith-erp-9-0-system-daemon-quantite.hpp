@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-daemon-quantite.hpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 #ifndef YERITH_ERP_3_0_SYSTEM_DAEMON_QUANTITE_HPP_

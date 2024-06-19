@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-software-text-configuration.hpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. Xavier Noundou
+ *      Author: Pr. Prof. Dr. Xavier Noundou
  */
 
 #ifndef _YERITH_ERP_3_0_SOFTWARE_TEXT_CONFIGURATION_HPP_
