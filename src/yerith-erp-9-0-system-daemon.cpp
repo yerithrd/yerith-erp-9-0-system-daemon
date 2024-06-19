@@ -91,7 +91,7 @@ int main(int argc, char *argv[])
 
 
     qDebug() <<
-             "yerith-erp-9-0-system-daemon.cpp | main | YERITH-PGI-3.0 HOME FOLDER: "
+             "yerith-erp-9-0-system-daemon.cpp | main | YERITH-PGI-9.0 HOME FOLDER: "
              << YerenConfig::YERITH_ERP_3_0_HOME_FOLDER;
 
 
@@ -184,7 +184,7 @@ int main(int argc, char *argv[])
         errMsg.append(QString(" à un serveur MYSQL externe (%1) !\n\n"
                               "Contacter Pr. Prof. Dr. Xavier Noundou\n"
                               "\t(YERITH.xavier@gmail.com)\n\n"
-                              "Cliquer sur 'Cancel' pour terminer YERITH-PGI-3.0").
+                              "Cliquer sur 'Cancel' pour terminer YERITH-PGI-9.0").
                       arg(database.db_ip_address()));
 
         QDEBUG_STRING_OUTPUT_2("yerith-erp-9-0-system-daemon",
@@ -204,7 +204,7 @@ int main(int argc, char *argv[])
         							  "Dernière erreur (%2).\n\n"
                          	 	 	  "Contacter Pr. Prof. Dr. Xavier Noundou\n"
                          	 	 	  "\t(YERITH.xavier@gmail.com)\n\n"
-                         	 	 	  "Cliquer sur 'Cancel' pour terminer YERITH-PGI-3.0")
+                         	 	 	  "Cliquer sur 'Cancel' pour terminer YERITH-PGI-9.0")
                       	  	  .arg(database.db_ip_address(),
                       	  		   database.lastError().text()));
 
