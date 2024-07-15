@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-utils.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef SRC_YERITH_UTILS_HPP_

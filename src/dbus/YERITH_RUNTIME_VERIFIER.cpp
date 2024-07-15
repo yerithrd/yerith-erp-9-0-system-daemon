@@ -1,7 +1,7 @@
 /*
  * YERITH_RUNTIME_VERIFIER.hpp
  *
- *      Author: PROF. DR.-ENG. DIPL.-INF. XAVIER NOUNDOU
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 

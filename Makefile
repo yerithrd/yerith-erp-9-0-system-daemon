@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = yerith-erp-9-0-system-daemon3.0
-DISTDIR = /home/xyerith/yerith-erp-9-0-system-daemon/obj/yerith-erp-9-0-system-daemon3.0
+DISTDIR = /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/obj/yerith-erp-9-0-system-daemon3.0
 LINK          = g++
 LFLAGS        = -Wl,-O1
 LIBS          = $(SUBLIBS) /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Sql.so /usr/lib/x86_64-linux-gnu/libQt5DBus.so /usr/lib/x86_64-linux-gnu/libQt5Network.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
@@ -489,18 +489,18 @@ compiler_moc_header_clean:
 moc/moc_YRIruntimeverification_adaptor.cpp: src/YRIruntimeverification_adaptor.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/YRIruntimeverification_adaptor.h -o moc/moc_YRIruntimeverification_adaptor.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/YRIruntimeverification_adaptor.h -o moc/moc_YRIruntimeverification_adaptor.cpp
 
 moc/moc_IYRIruntimeverificationAdaptor_interface.cpp: src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/IYRIruntimeverificationAdaptor_interface.h -o moc/moc_IYRIruntimeverificationAdaptor_interface.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/IYRIruntimeverificationAdaptor_interface.h -o moc/moc_IYRIruntimeverificationAdaptor_interface.cpp
 
 moc/moc_YERITH_RUNTIME_VERIFIER.cpp: src/dbus/YERITH_RUNTIME_VERIFIER.hpp \
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/dbus/YERITH_RUNTIME_VERIFIER.hpp -o moc/moc_YERITH_RUNTIME_VERIFIER.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/dbus/YERITH_RUNTIME_VERIFIER.hpp -o moc/moc_YERITH_RUNTIME_VERIFIER.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-abstract-entity.cpp: src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp \
 		src/include/yerith-erp-9-0-definition-oo-class-operators.hpp \
@@ -509,7 +509,7 @@ moc/moc_yerith-erp-9-0-system-daemon-abstract-entity.cpp: src/include/yerith-erp
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp -o moc/moc_yerith-erp-9-0-system-daemon-abstract-entity.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp -o moc/moc_yerith-erp-9-0-system-daemon-abstract-entity.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp: src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp \
 		src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp \
@@ -519,14 +519,14 @@ moc/moc_yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp: src/include/yeri
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp -o moc/moc_yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp -o moc/moc_yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-utils.cpp: src/utils/yerith-erp-9-0-system-daemon-utils.hpp \
 		src/dbus/YERITH_RUNTIME_VERIFIER.hpp \
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/utils/yerith-erp-9-0-system-daemon-utils.hpp -o moc/moc_yerith-erp-9-0-system-daemon-utils.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/utils/yerith-erp-9-0-system-daemon-utils.hpp -o moc/moc_yerith-erp-9-0-system-daemon-utils.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp: src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp \
 		src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp \
@@ -536,7 +536,7 @@ moc/moc_yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp: src/yerith-erp-9-0
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp -o moc/moc_yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp -o moc/moc_yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-periode.cpp: src/yerith-erp-9-0-system-daemon-periode.hpp \
 		src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp \
@@ -547,7 +547,7 @@ moc/moc_yerith-erp-9-0-system-daemon-periode.cpp: src/yerith-erp-9-0-system-daem
 		src/IYRIruntimeverificationAdaptor_interface.h \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-periode.hpp -o moc/moc_yerith-erp-9-0-system-daemon-periode.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-periode.hpp -o moc/moc_yerith-erp-9-0-system-daemon-periode.cpp
 
 moc/moc_yerith-erp-9-0-system-daemon-quantite.cpp: src/yerith-erp-9-0-system-daemon-quantite.hpp \
 		src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp \
@@ -559,7 +559,7 @@ moc/moc_yerith-erp-9-0-system-daemon-quantite.cpp: src/yerith-erp-9-0-system-dae
 		src/include/yerith-erp-9-0-software-text-configuration.hpp \
 		moc/moc_predefs.h \
 		/usr/lib/qt5/bin/moc
-	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/xyerith/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/xyerith/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-quantite.hpp -o moc/moc_yerith-erp-9-0-system-daemon-quantite.cpp
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/moc/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon -I/usr/include/c++/10 -I/usr/include/x86_64-linux-gnu/c++/10 -I/usr/include/c++/10/backward -I/usr/lib/gcc/x86_64-linux-gnu/10/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include src/yerith-erp-9-0-system-daemon-quantite.hpp -o moc/moc_yerith-erp-9-0-system-daemon-quantite.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -735,84 +735,84 @@ obj/moc_yerith-erp-9-0-system-daemon-quantite.o: moc/moc_yerith-erp-9-0-system-d
 ####### Install
 
 install_target: first FORCE
-	@test -d $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0 || mkdir -p $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0
-	$(QINSTALL_PROGRAM) bin/$(QMAKE_TARGET) $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
-	-$(STRIP) $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
+	@test -d $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0 || mkdir -p $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0
+	$(QINSTALL_PROGRAM) bin/$(QMAKE_TARGET) $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
+	-$(STRIP) $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
 
 uninstall_target: FORCE
-	-$(DEL_FILE) $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
-	-$(DEL_DIR) $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/ 
+	-$(DEL_FILE) $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/$(QMAKE_TARGET)
+	-$(DEL_DIR) $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon-3.0/ 
 
 
 install_sources: first FORCE
-	@test -d $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/. || mkdir -p $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/.
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/YRIruntimeverification_adaptor.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/IYRIruntimeverificationAdaptor_interface.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/dbus/YERITH_RUNTIME_VERIFIER.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-abstract-entity.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-9-0-system-daemon-utils.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-database-table-column.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-periode.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-database.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-quantite.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-logger.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-config.cpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.cpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/YRIruntimeverification_adaptor.h $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.h
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/IYRIruntimeverificationAdaptor_interface.h $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.h
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/dbus/YERITH_RUNTIME_VERIFIER.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-definition-oo-class-operators.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-definition-oo-class-operators.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-software-text-configuration.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-software-text-configuration.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-9-0-system-daemon-utils.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-database-table-column.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-periode.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-database.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-quantite.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-logger.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-config.hpp $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.hpp
-	$(QINSTALL) /home/xyerith/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon.pro $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.pro
+	@test -d $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/. || mkdir -p $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/.
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/YRIruntimeverification_adaptor.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/IYRIruntimeverificationAdaptor_interface.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/dbus/YERITH_RUNTIME_VERIFIER.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-abstract-entity.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-9-0-system-daemon-utils.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-database-table-column.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-periode.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-database.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-quantite.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-logger.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-config.cpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.cpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/YRIruntimeverification_adaptor.h $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.h
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/IYRIruntimeverificationAdaptor_interface.h $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.h
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/dbus/YERITH_RUNTIME_VERIFIER.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-definition-oo-class-operators.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-definition-oo-class-operators.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/include/yerith-erp-9-0-software-text-configuration.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-software-text-configuration.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-9-0-system-daemon-utils.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/utils/yerith-erp-database-table-column.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-periode.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-database.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-quantite.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-logger.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/src/yerith-erp-9-0-system-daemon-config.hpp $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.hpp
+	$(QINSTALL) /home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/yerith-erp-9-0-system-daemon.pro $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.pro
 
 uninstall_sources: FORCE
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.pro
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-software-text-configuration.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-definition-oo-class-operators.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.hpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.h
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.h
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.cpp
-	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.cpp
-	-$(DEL_DIR) $(INSTALL_ROOT)/home/xyerith/yerith-erp-9-0-system-daemon/./ 
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.pro
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-software-text-configuration.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-definition-oo-class-operators.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.hpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.h
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.h
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-config.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-logger.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-quantite.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-database.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-periode.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-database-table-column.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-utils.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-abstract-entity.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YERITH_RUNTIME_VERIFIER.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./IYRIruntimeverificationAdaptor_interface.cpp
+	-$(DEL_FILE) -r $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./YRIruntimeverification_adaptor.cpp
+	-$(DEL_DIR) $(INSTALL_ROOT)/home/yerith-erp-pgi/yerith-erp-9-0-system-daemon/./ 
 
 
 install: install_target install_sources  FORCE

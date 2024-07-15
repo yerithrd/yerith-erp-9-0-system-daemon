@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef YERITH_ERP_3_0_SYSTEM_DAEMON_DB_BACKUP_EXPORT_GZ_HPP_

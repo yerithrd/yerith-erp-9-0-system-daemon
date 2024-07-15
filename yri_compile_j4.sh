@@ -1,5 +1,5 @@
 #!/bin/bash
-#AUTEUR: Pr. Prof. Dr. Xavier Noundou
+#AUTEUR: Pr. Prof. Dr.-Ing. Xavier Noundou
 #EMAIL: YERITH.xavier@gmail.com
 
 YRI_ERRORS_LOG_FILE="yri_errors.log"

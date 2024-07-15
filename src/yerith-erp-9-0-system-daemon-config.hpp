@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-system-daemon-config.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef SRC_YERITH_ALERT_CONFIG_HPP_
@@ -52,7 +52,7 @@ public:
             errMsg.append(" ne peut pas ouvrir pour lecture le fichier ")
             	  .append(initCfg)
 				  .append(". ) !\n\n"
-						  "Contacter Pr. Prof. Dr. Xavier Noundou\n"
+						  "Contacter Pr. Prof. Dr.-Ing. Xavier Noundou\n"
 						  "\t(YERITHERP30@GMAIL.COM)\n\n"
 						  "Cliquer sur 'Cancel' pour terminer yeren");
 

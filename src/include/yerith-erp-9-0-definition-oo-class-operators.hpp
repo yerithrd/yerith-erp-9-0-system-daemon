@@ -1,7 +1,7 @@
 /*
  * yerith-erp-9-0-definition-oo-class-operators.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef _YERITH_ERP_3_0_DEFINITION_OO_CLASS_OPERATORS_HPP_

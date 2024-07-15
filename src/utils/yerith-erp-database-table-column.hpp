@@ -1,7 +1,7 @@
 /*
  * yerith-erp-database-table-column.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef SRC_UTILS_YERITH_DATABASE_TABLES_COLUMNS_HPP_

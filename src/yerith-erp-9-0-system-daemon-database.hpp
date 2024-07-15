@@ -1,7 +1,7 @@
 /*
  * yeren-database.hpp
  *
- *      Author: Pr. Prof. Dr. Xavier Noundou
+ *      Author: Pr. Prof. Dr.-Ing. Xavier Noundou
  */
 
 #ifndef SRC_UTILS_YERITH_DATABASE_HPP_
