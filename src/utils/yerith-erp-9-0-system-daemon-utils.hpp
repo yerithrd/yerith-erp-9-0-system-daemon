@@ -267,6 +267,8 @@ private:
 
 #define QDEBUG_STRING_OUTPUT_1(X) YerothERPAlertUtils::qDebugStrings(X, "")
 
+#define QDEBUG_STRING_OUTPUT_2_BOOL(X, Y) YerothERPAlertUtils::qDebugStrings(X, BOOL_TO_STRING(Y))
+
 #define QDEBUG_STRING_OUTPUT_2_N(X, Y) YerothERPAlertUtils::qDebugStrings(X, QString::number(Y))
 
 #define QDEBUG_STRING_OUTPUT_2(X, Y) YerothERPAlertUtils::qDebugStrings(X, Y)
