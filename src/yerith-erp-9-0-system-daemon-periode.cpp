@@ -19,8 +19,8 @@
 YERITH_ERP_SYSTEM_DAEMON_ALERT_PERIOD_TIME::YERITH_ERP_SYSTEM_DAEMON_ALERT_PERIOD_TIME(YERITH_ERP_SYSTEM_DAEMON_LOGGER *logger):YERITH_ERP_SYSTEM_DAEMON_ALERT_ABSTRACT_ENTITY
     (logger)
 {
-    //qDebug() << "[YerenAlertPeriode][YerenAlertPeriode]";
-    //*_logger << "[YerenAlertPeriode][YerenAlertPeriode]\n";
+    //qDebug() << "[YerithERPDaemonPeriodAlertEntity][YerithERPDaemonPeriodAlertEntity]";
+    //*_logger << "[YerithERPDaemonPeriodAlertEntity][YerithERPDaemonPeriodAlertEntity]\n";
 
     _alertesTimer = new QTimer(this);
 

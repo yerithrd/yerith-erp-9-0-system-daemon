@@ -20,8 +20,8 @@ YERITH_ERP_SYSTEM_DAEMON_ALERT_OVER_STOCK_QUANTITY::
 	YERITH_ERP_SYSTEM_DAEMON_ALERT_OVER_STOCK_QUANTITY(YERITH_ERP_SYSTEM_DAEMON_LOGGER *logger)
 :YERITH_ERP_SYSTEM_DAEMON_ALERT_ABSTRACT_ENTITY(logger)
 {
-    //qDebug() << "[YerenAlertDaemonQuantite][YerenAlertDaemonQuantite]";
-    *_logger << "[erenAlertDaemonQuantite | YerenAlertDaemonQuantite]\n";
+    //qDebug() << "[YerithERPDaemonQuantite][YerithERPDaemonQuantite]";
+    *_logger << "[YerithERPDaemonQuantite | YerithERPDaemonQuantite]\n";
 
     _alertesTimer = new QTimer(this);
 
