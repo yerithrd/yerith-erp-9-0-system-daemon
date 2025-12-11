@@ -1,0 +1,8 @@
+1.) enregistrer tous les membres du groupe d'employes (membres_du_groupe_db_ID)
+2.) chercher ensuite le groupe de paie y correspondant (groupe_de_paie_hr)
+3.) enregistrer le MONTANT_A_PAYER_MENSUEL (150000)
+4.) enregistrer la taxe sur salaire (pourcentage_TAXES_IMPOSABLES)
+5.) enregistrer la ligne budgetaire (intitule_de_la_ligne_budgetaire)
+6.) verifier que les depenses sur la ligne budgetaire ne sont pas excedentaires; si
+    oui, ne plus payer et / ou mentioner ceci !
+    Si non payer a l'employe.
