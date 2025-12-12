@@ -1,4 +1,5 @@
-1.) enregistrer tous les membres du groupe d'employes (membres_du_groupe_db_ID)
+1.) naviguer sur la liste de tous les employes;
+1.) enregistrer tous les groupes d'employes;
 2.) chercher ensuite le groupe de paie y correspondant (groupe_de_paie_hr)
 3.) enregistrer le MONTANT_A_PAYER_MENSUEL (150000)
 4.) enregistrer la taxe sur salaire (pourcentage_TAXES_IMPOSABLES)

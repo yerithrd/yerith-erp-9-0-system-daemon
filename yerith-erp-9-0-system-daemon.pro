@@ -1,5 +1,5 @@
 
-CONFIG += precompile_header 
+CONFIG += precompile_header
 #CONFIG += debug
 CONFIG += qt
 CONFIG += console
@@ -27,10 +27,11 @@ MOC_DIR  = moc
 OBJECTS_DIR = obj
 
 PRECOMPILED_HEADER  = src/include/yerith-erp-9-0-precompiled-header.hpp
- 
+
 HEADERS = src/YRIruntimeverification_adaptor.h \
 			src/IYRIruntimeverificationAdaptor_interface.h \
 			src/dbus/YERITH_RUNTIME_VERIFIER.hpp \
+			src/entities/yerith-erp-9-0-system-daemon-entity-Employe.hpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp \
 			src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp \
 			src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.hpp \
@@ -38,22 +39,25 @@ HEADERS = src/YRIruntimeverification_adaptor.h \
 			src/include/yerith-erp-9-0-software-text-configuration.hpp \
 		  src/utils/yerith-erp-9-0-system-daemon-utils.hpp \
 			src/utils/yerith-erp-database-table-column.hpp \
+			src/yerith-erp-9-0-system-daemon-runtime-pay.hpp \
 			src/yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp \
 			src/yerith-erp-9-0-system-daemon-periode.hpp \
 		  src/yerith-erp-9-0-system-daemon-database.hpp \
 		  src/yerith-erp-9-0-system-daemon-quantite.hpp \
 		  src/yerith-erp-9-0-system-daemon-logger.hpp \
 		  src/yerith-erp-9-0-system-daemon-config.hpp
- 
+
 SOURCES = src/YRIruntimeverification_adaptor.cpp \
 			src/IYRIruntimeverificationAdaptor_interface.cpp \
 			src/dbus/YERITH_RUNTIME_VERIFIER.cpp \
+			src/entities/yerith-erp-9-0-system-daemon-entity-Employe.cpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp \
 			src/include/yerith-erp-9-0-system-daemon-abstract-entity.cpp \
 			src/include/yerith-erp-9-0-system-daemon-alert-abstract-entity.cpp \
 		  src/utils/yerith-erp-9-0-system-daemon-utils.cpp \
 		  src/yerith-erp-9-0-system-daemon.cpp \
 			src/utils/yerith-erp-database-table-column.cpp \
+			src/yerith-erp-9-0-system-daemon-runtime-pay.cpp \
 			src/yerith-erp-9-0-system-daemon-db-backup-export-gz.cpp \
 		  src/yerith-erp-9-0-system-daemon-periode.cpp \
 		  src/yerith-erp-9-0-system-daemon-database.cpp \

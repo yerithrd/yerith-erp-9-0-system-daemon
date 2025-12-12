@@ -22,6 +22,86 @@ QString YerothERPDatabase::_db_user_pwd("");
 
 QString YerothERPDatabase::_db_connection_options("");
 
+
+const QString YerothERPDatabase::PERIODES_DAPPARTENANCE_GROUPES_DE_PAIE_HR("periodes_dappartenance_groupes_de_paie_hr");
+
+const QString YerothERPDatabase::IMPRIMANTERESEAU_RECUS_PETITS("imprimantereseau_recus_petits");
+
+const QString YerothERPDatabase::COMPTES_BANCAIRES("comptes_bancaires");
+
+const QString YerothERPDatabase::OPERATIONS_COMPTABLES("operations_comptables");
+
+const QString YerothERPDatabase::ENTREPRISE_INFO("entreprise_info");
+
+const QString YerothERPDatabase::PAIEMENTS("paiements");
+
+const QString YerothERPDatabase::USERS("users");
+
+const QString YerothERPDatabase::UNITES_DE_MESURES("unites_DE_MESURES");
+
+const QString YerothERPDatabase::TITRES("titres");
+
+const QString YerothERPDatabase::LOCALISATIONS("localisations");
+
+const QString YerothERPDatabase::DEPARTEMENTS_PRODUITS("departements_produits");
+
+const QString YerothERPDatabase::CATEGORIES("categories");
+
+const QString YerothERPDatabase::LIGNES_BUDGETAIRES("LIGNES_BUDGETAIRES");
+
+const QString YerothERPDatabase::PROGRAMMES_DE_FIDELITE_CLIENTS("programmes_de_fidelite_clients");
+
+const QString YerothERPDatabase::GROUPES_DEMPLOYES_hr("groupes_demployes_hr");
+
+const QString YerothERPDatabase::GROUPES_DE_PAIE_hr("groupes_de_paie_hr");
+
+const QString YerothERPDatabase::CLIENTS("clients");
+
+const QString YerothERPDatabase::GROUPES_DE_CLIENTS("groupes_de_clients");
+
+const QString YerothERPDatabase::FOURNISSEURS("fournisseurs");
+
+const QString YerothERPDatabase::ALERTES("alertes");
+
+const QString YerothERPDatabase::REMISES("remises");
+
+const QString YerothERPDatabase::CREDIT_CARD_ISSUING_COMPANY("credit_card_issuing_company");
+
+const QString YerothERPDatabase::CONDITIONS_ALERTES("conditions_alertes");
+
+const QString YerothERPDatabase::COURRIERS_ALERTES("courriers_alertes");
+
+const QString YerothERPDatabase::CHARGES_FINANCIERES("charges_financieres");
+
+const QString YerothERPDatabase::ACHATS("achats");
+
+const QString YerothERPDatabase::STOCKS("stocks");
+
+const QString YerothERPDatabase::SERVICES_COMPLETES("services_completes");
+
+const QString YerothERPDatabase::STOCKS_VENDU("stocks_vendu");
+
+const QString YerothERPDatabase::STOCKS_SORTIES("stocks_sorties");
+
+const QString YerothERPDatabase::MARCHANDISES("marchandises");
+
+const QString YerothERPDatabase::CONFIGURATIONS("configurations");
+
+const QString YerothERPDatabase::INIT_CONFIGURATIONS("init_configurations");
+
+const QString YerothERPDatabase::YRI_DB_RUNTIME_VERIF("yri_db_runtime_verif");
+
+const QString YerothERPDatabase::TYPE_DOPERATIONS_FINANCIERES("type_doperations_financieres");
+
+const QString YerothERPDatabase::TYPE_DE_VENTE("type_de_vente");
+
+const QString YerothERPDatabase::TYPE_DE_PAIEMENT("type_de_paiement");
+
+const QString YerothERPDatabase::ROLES("roles");
+
+const QString YerothERPDatabase::DBMS("dbms");
+
+
 YerothERPDatabase::YerothERPDatabase(QString dbType)
 {
     if (YerothERPAlertUtils::

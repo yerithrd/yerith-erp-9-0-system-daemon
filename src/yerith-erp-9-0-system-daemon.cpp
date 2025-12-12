@@ -5,6 +5,8 @@
  */
 
 
+#include "yerith-erp-9-0-system-daemon-runtime-pay.hpp"
+
 #include "yerith-erp-9-0-system-daemon-db-backup-export-gz.hpp"
 
 #include "yerith-erp-9-0-system-daemon-periode.hpp"
@@ -222,6 +224,10 @@ int main(int argc, char *argv[])
     //qDebug() << "yerith-erp-9-0-system-daemon.cpp | main | Database connection could be opened successfully";
     //logger << "[yerith-erp-9-0-system-daemon.cpp][main] Database connection could be opened successfully"
     //         << "\n";
+
+
+    YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP RUNTIME_PAY_YERITH_ERP_3_SYSTEM_DAEMON;
+
 
     YERITH_ERP_SYSTEM_DAEMON_DB_BACKUP_EXPORT_GZ BACKUP_YERITH_ERP_3_SYSTEM_DAEMON;
 

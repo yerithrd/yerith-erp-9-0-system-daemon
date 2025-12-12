@@ -18,7 +18,12 @@ class YerothDatabaseTableColumn
 {
 public:
 
-    YERITH_CLASS_OPERATORS static const QString IS_SERVICE;
+    YERITH_CLASS_OPERATORS
+
+
+    static const QString YRI_Not_PHYSICAL_ASSET_STOCK_DEPARTMENT;
+
+    static const QString IS_SERVICE;
 
     static const QString IS_VENTE_EN_GROS;
 
@@ -26,7 +31,39 @@ public:
 
     static const QString ID;
 
+    static const QString ERROR_ACCEPTED_RUNTIME_MONITOR_NAME;
+
+    static const QString ERROR_ACCEPTED_RUNTIME_MONITOR_NAME_ID;
+
+    static const QString ERROR_ACCEPTED_RUNTIME_MONITOR_NAME_DESCRIPTION;
+
+    static const QString REFEREUR_CLIENT;
+
+    static const QString REFEREUR_CLIENT_ID;
+
+    static const QString GROUPES_DU_CLIENT;
+
+    static const QString GROUPES_DU_CLIENT_ID;
+
+    static const QString GROUPE_DE_PAIE_HR;
+
+    static const QString GROUPES_DUN_EMPLOYE;
+
+    static const QString GROUPES_DUN_EMPLOYE_ID;
+
+    static const QString HISTORIQUE_STOCK_ACTIF;
+
     static const QString HISTORIQUE_STOCK;
+
+    static const QString MEMBRES_DU_GROUPE_db_ID;
+
+    static const QString POURCENTAGE_TAXES_IMPOSABLES;
+
+    static const QString POURCENTAGE_DU_RABAIS;
+
+    static const QString MAXIMUM_DE_MEMBRES;
+
+    static const QString CLIENT_PROCHAIN_RENDEZ_VOUS;
 
     static const QString CLIENTS_ID;
 
@@ -38,13 +75,27 @@ public:
 
     static const QString ENREGISTREUR_STOCK;
 
+    static const QString NOM_UTILISATEUR_DU_COMMANDEUR_DE_LACHAT;
+
+    static const QString STATUT_DE_LACHAT_AU_FOURNISSEUR;
+
+    static const QString memo_sale_for_sale;
+
     static const QString REFERENCE;
 
     static const QString COMPTE_FOURNISSEUR;
 
+    static const QString COMPTE_CLIENT_PROGRAMME_DE_FIDELITE_CLIENTS;
+
+    static const QString COMPTECLIENT_AVANCE_DE_CASH;
+
     static const QString COMPTE_CLIENT;
 
     static const QString DETTE_MAXIMALE_COMPTE_CLIENT;
+
+    static const QString NUMERO_UNIQUE;
+
+    static const QString NOM_DEPARTEMENT_PRODUIT;
 
     static const QString CATEGORIE;
 
@@ -62,6 +113,8 @@ public:
 
     static const QString QUANTITE_SORTIE;
 
+    static const QString DESCRIPTION_GROUPE;
+
     static const QString DESCRIPTION_FOURNISSEUR;
 
     static const QString DESCRIPTION_PRODUIT;
@@ -71,6 +124,8 @@ public:
     static const QString PRIX_UNITAIRE_EN_GROS;
 
     static const QString REFERENCE_RECU_DACHAT;
+
+    static const QString PROGRAMME_DE_FIDELITE_CLIENTS;
 
     static const QString PRIX_DACHAT_PRECEDENT;
 
@@ -90,13 +145,41 @@ public:
 
     static const QString INTITULE_DU_COMPTE_BANCAIRE;
 
+    static const QString INTITULE_COMPTE_DOPERATION_DANS_LIGNE_BUDGETAIRE;
+
+    static const QString montant_RESTANT_de_la_ligne_budgetaire;
+
+    static const QString montant_de_la_ligne_budgetaire;
+
+    static const QString INTITULE_DE_LA_ligne_budgetaire;
+
     static const QString INSTITUT_BANCAIRE;
 
     static const QString DESCRIPTION_DU_COMPTE_BANCAIRE;
 
+    static const QString DESCRIPTION_charge_financiere;
+
+    static const QString DESCRIPTION_ligne_budgetaire;
+
+    static const QString DESCRIPTION_DEPARTEMENT_PRODUIT;
+
     static const QString DESCRIPTION_CATEGORIE;
 
+    static const QString IS_SOUS_CATEGORIE;
+
+    static const QString MANAGER;
+
+    static const QString DEPARTEMENT;
+
+    static const QString POSITION_FONCTION;
+
+    static const QString UNITE_DE_MESURE_DE_VENTE;
+
+    static const QString TITRES_Employe;
+
     static const QString NOM_CATEGORIE;
+
+    static const QString LIGNE_BUDGETAIRE;
 
     static const QString MONTANT_TVA;
 
@@ -114,6 +197,10 @@ public:
 
     static const QString MONTANT_TOTAL_VENTE;
 
+    static const QString MONTANT_RABAIS_PROGRAMME_DE_FIDELITE_CLIENTS;
+
+    static const QString SERVICE_SUPPLEMENT_AJOUT_COMMERCIAL;
+
     static const QString REMISE_PRIX;
 
     static const QString REMISE_POURCENTAGE;
@@ -126,11 +213,23 @@ public:
 
     static const QString LOTS_ENTRANT;
 
+    static const QString EMPLOYE;
+
     static const QString IMAGE_FOURNISSEUR;
 
     static const QString IMAGE_COMPTE_CLIENT;
 
+    static const QString LOGO_ENTREPRISE;
+
+    static const QString IS_PAYEMENT_HR_HR;
+
     static const QString IMAGE_PRODUIT;
+
+    static const QString DATE_JOUR_DE_PAYE;
+
+    static const QString DATE_DE_DEBUT_DAPPARTENANCE;
+
+    static const QString DATE_DE_FIN_DAPPARTENANCE;
 
     static const QString DATE_PEREMPTION;
 
@@ -160,6 +259,10 @@ public:
 
     static const QString NOM_LOCALISATION;
 
+    static const QString MESSAGE_PDV_RECU_PETIT;
+
+    static const QString IMAGE_DUN_UTILISATEUR;
+
     static const QString NOM_UTILISATEUR;
 
     static const QString STOCKS_ID;
@@ -167,6 +270,8 @@ public:
     static const QString STOCK_MANAGER;
 
     static const QString MOT_PASSE;
+
+    static const QString UNITE_DE_MESURE;
 
     static const QString TITRE;
 
@@ -180,6 +285,14 @@ public:
 
     static const QString REFERENCE_FOURNISSEUR;
 
+    static const QString REFERENCE_PROGRAMME_DE_FIDELITE_CLIENTS;
+
+    static const QString REFERENCE_GROUPE;
+
+    static const QString REFERENCE_GROUPE_DE_PAIE_hr;
+
+    static const QString REFERENCE_GROUPE_DEMPLOYES_hr;
+
     static const QString REFERENCE_CLIENT;
 
     static const QString NUMERO_TELEPHONE_1;
@@ -190,9 +303,15 @@ public:
 
     static const QString DATE_NAISSANCE;
 
+    static const QString QUARTIER_ENTREPRISE_CLIENT;
+
+    static const QString VILLE_ENTREPRISE_CLIENT;
+
     static const QString VILLE;
 
     static const QString QUARTIER;
+
+    static const QString REGION_ETAT_ENTREPRISE_CLIENT;
 
     static const QString PROVINCE_ETAT;
 
@@ -201,6 +320,8 @@ public:
     static const QString ADRESSE;
 
     static const QString ADRESSE_IP;
+
+    static const QString ADRESSE_IP_RESEAU_IMPRIMANTE_THERMIQUE;
 
     static const QString BOITE_POSTALE;
 
@@ -214,6 +335,18 @@ public:
 
     static const QString SECTEURS_DACTIVITES;
 
+    static const QString CARTE_DE_FIDELITE_CLIENT_nom_entreprise;
+
+    static const QString CARTE_DE_FIDELITE_CLIENT_siege;
+
+    static const QString CARTE_DE_FIDELITE_CLIENT_service_de_gestion_clientele;
+
+    static const QString CARTE_DE_FIDELITE_CLIENT_service_du_programme_de_fidelite_client;
+
+    static const QString CARTE_DE_FIDELITE_CLIENT_email;
+
+    static const QString CARTE_DE_FIDELITE_CLIENT_telephone;
+
     static const QString NUMERO_CONTRIBUABLE;
 
     static const QString REFERENCE_REGISTRE_DU_COMMERCE;
@@ -223,6 +356,12 @@ public:
     static const QString NOM_ENTREPRISE_CLIENT;
 
     static const QString NOM_ENTREPRISE_FOURNISSEUR;
+
+	static const QString DESCRIPTION_GROUPE_DE_PAIE_HR;
+
+    static const QString DESCRIPTION_GROUPE_DEMPLOYES_HR;
+
+    static const QString DESCRIPTION_PROGRAMME_DE_FIDELITE_CLIENTS;
 
     static const QString DESCRIPTION_CLIENT;
 
@@ -239,6 +378,8 @@ public:
     static const QString DATE_PAIEMENT;
 
     static const QString MONTANT_PAYE;
+
+    static const QString MONTANT_A_PAYER_MENSUEL;
 
     static const QString DATE_VENTE;
 
@@ -264,7 +405,11 @@ public:
 
     static const QString DATE_CREATION;
 
+    static const QString TYPE_DOPERATION_FINANCIERE;
+
     static const QString TYPE_DE_PAIEMENT;
+
+    static const QString TYPE_DE_CREDIT_DEBIT;
 
     static const QString TYPE_DE_VENTE;
 
