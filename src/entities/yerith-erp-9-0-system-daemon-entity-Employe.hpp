@@ -21,8 +21,18 @@ public:
 
     YERITH_CLASS_OPERATORS
 
-    QString _groupe_dun_employe_paye;
 
+    void set__Employee_GROUP(QString groupe_dun_employe);
+
+
+    QString _nom_entreprise;
+
+    QList<QString> _groupe_dun_employe__LIST;
+
+
+private:
+
+    QString _groupe_dun_employe;
 };
 
 

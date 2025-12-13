@@ -111,8 +111,6 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
     }
 
 
-    naviguer___SUR__TOUS___DES___employes();
-
     do_payments_to_employee();
 
     //do_backups() is called every _alertesTimeIntervall ms
@@ -155,7 +153,6 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___
                         .arg(YerothDatabaseTableColumn::NOM_ENTREPRISE,
                              YerothDatabaseTableColumn::GROUPES_DUN_EMPLOYE,
                              YerothERPDatabase::FOURNISSEURS,
-                             YerothDatabaseTableColumn::DESIGNATION,
                              YerothDatabaseTableColumn::EMPLOYE);
 
     _Employee *an_employee_RECORD = 0;
@@ -168,6 +165,8 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___
     int querySize = YerothERPAlertUtils::execQuery(a_sql_query,
                                                    query);
 
+//    QDEBUG_STRING_OUTPUT_2_N("querySize", querySize);
+
     if (querySize > 0)
     {
         while (a_sql_query.next())
@@ -178,12 +177,16 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___
 
             an_employee_RECORD = new _Employee;
 
-            an_employee_RECORD->_groupe_dun_employe_paye =
+
+            an_employee_RECORD->_nom_entreprise =
+                            GET_SQL_RECORD_DATA(a_qsql_record,
+                                                YerothDatabaseTableColumn::NOM_ENTREPRISE);
+
+            QString Employe_Group =
                             GET_SQL_RECORD_DATA(a_qsql_record,
                                                 YerothDatabaseTableColumn::GROUPES_DUN_EMPLOYE);
 
-            QDEBUG_STRING_OUTPUT_2("an_employee_RECORD->_groupe_dun_employe_paye ",
-                                    an_employee_RECORD->_groupe_dun_employe_paye);
+            an_employee_RECORD->set__Employee_GROUP(Employe_Group);
         }
     }
 }
@@ -193,6 +196,9 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 {
 //      QDEBUG_STRING_OUTPUT_2("YERITH_ERP_SYSTEM_DAEMON_DB_BACKUP_EXPORT_GZ ****",
 //                      _YERITH_ERP_3_0_SQL_BACKUP_DIRECTORY);
+
+    naviguer___SUR__TOUS___DES___employes();
+
 
     if (_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT.isEmpty())
     {
@@ -205,8 +211,8 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
     YerothERPAlertUtils::YERITH_CREATE_FOLDER(_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT);
 
 
-      QDEBUG_STRING_OUTPUT_2("_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT ***",
-                      _DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT );
+//      QDEBUG_STRING_OUTPUT_2("_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT ***",
+//                      _DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT );
 
 //    QStringList progArguments;
 //

@@ -10,3 +10,12 @@
 
 
 
+void _Employee::set__Employee_GROUP(QString groupes_dun_employe)
+{
+    _groupe_dun_employe = groupes_dun_employe;
+
+
+    QString a___groupes_dun_employe = _groupe_dun_employe;
+
+    _groupe_dun_employe__LIST = a___groupes_dun_employe.split("*", Qt::SkipEmptyParts);
+}
