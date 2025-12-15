@@ -147,6 +147,82 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
 //}
 
 
+ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___groupes_demployes()
+{
+    QList<QString> Current_groupe__dun_employe__LIST;
+
+
+    QString groupe_de_paie_hr;
+
+    QSqlRecord a_qsql_record;
+
+    QSqlQuery a_sql_query;
+
+    int querySize = 0;
+
+
+    _Employee *an_employee = 0;
+
+    QSetIterator<_Employee *> an_employee_iterator(set_of_employee);
+
+    while (an_employee_iterator.hasNext())
+    {
+       an_employee = an_employee_iterator.next();
+
+        if (0 == an_employee)
+        {
+            continue;
+        }
+
+        QDEBUG_STRING_OUTPUT_2("an_employee", an_employee->_nom_entreprise);
+
+        Current_groupe__dun_employe__LIST = an_employee->_groupe_dun_employe__LIST;
+
+        for (uint k = 0; k < Current_groupe__dun_employe__LIST.size(); ++k)
+        {
+            a_sql_query.clear();
+
+            QString queryStr = QString("SELECT %1 FROM %2 WHERE %3 = '%4'")
+                                .arg(YerothDatabaseTableColumn::GROUPE_DE_PAIE_HR,
+                                     YerothERPDatabase::GROUPES_DEMPLOYES_hr,
+                                     YerothDatabaseTableColumn::DESIGNATION,
+                                     Current_groupe__dun_employe__LIST.at(k));
+
+
+            QDEBUG_STRING_OUTPUT_2("queryStr", queryStr);
+;
+            QDEBUG_STRING_OUTPUT_2("Current_groupe__dun_employe__LIST.at(k)",
+                                    Current_groupe__dun_employe__LIST.at(k));
+
+            querySize = YerothERPAlertUtils::execQuery(a_sql_query,
+                                                       queryStr);
+
+            QDEBUG_STRING_OUTPUT_2_N("querySize", querySize);
+
+            if (querySize > 0)
+            {
+                a_qsql_record.clear();
+
+                a_qsql_record = a_sql_query.record();
+
+                groupe_de_paie_hr =
+                        GET_SQL_RECORD_DATA(a_qsql_record,
+                                            YerothDatabaseTableColumn::GROUPE_DE_PAIE_HR);
+
+                QDEBUG_STRING_OUTPUT_2("groupe_de_paie_hr", groupe_de_paie_hr);
+
+                if (! groupe_de_paie_hr.isEmpty())
+                {
+                    QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
+                    groupe_de_payes.insert(groupe_de_paie_hr);
+                }
+            }
+        }
+    }
+
+ }
+
+
 void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___employes()
 {
     QString query = QString("SELECT %1, %2 FROM %3 WHERE %4 = '1'")
@@ -187,6 +263,12 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___
                                                 YerothDatabaseTableColumn::GROUPES_DUN_EMPLOYE);
 
             an_employee_RECORD->set__Employee_GROUP(Employe_Group);
+
+            _nom_emtreprise__TO__groupe_demploye
+                .insert(an_employee_RECORD->_nom_entreprise,
+                        Employe_Group);
+
+            set_of_employee.insert(an_employee_RECORD);
         }
     }
 }
@@ -198,6 +280,8 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 //                      _YERITH_ERP_3_0_SQL_BACKUP_DIRECTORY);
 
     naviguer___SUR__TOUS___DES___employes();
+
+    naviguer___SUR__TOUS___DES___groupes_demployes();
 
 
     if (_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT.isEmpty())

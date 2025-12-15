@@ -8,6 +8,8 @@
 #define YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP_
 
 
+#include "entities/yerith-erp-9-0-system-daemon-entity-Employe.hpp"
+
 #include "src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp"
 
 
@@ -30,6 +32,8 @@ public slots:
 
 protected:
 
+    void naviguer___SUR__TOUS___DES___groupes_demployes();
+
     void naviguer___SUR__TOUS___DES___employes();
 
 
@@ -38,8 +42,11 @@ protected:
 
 public:
 
-    QMap<QString, QString> _nom_emtreprise__TO__groupe_demploye;
+    QSet<QString> groupe_de_payes;
 
+    QSet<_Employee *> set_of_employee;
+
+    QMap<QString, QString> _nom_emtreprise__TO__groupe_demploye;
 
 };
 
