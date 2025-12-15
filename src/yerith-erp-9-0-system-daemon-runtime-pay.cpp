@@ -174,7 +174,7 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
             continue;
         }
 
-        QDEBUG_STRING_OUTPUT_2("an_employee", an_employee->_nom_entreprise);
+//        QDEBUG_STRING_OUTPUT_2("an_employee", an_employee->_nom_entreprise);
 
         Current_groupe__dun_employe__LIST = an_employee->_groupe_dun_employe__LIST;
 
@@ -186,35 +186,29 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
                                 .arg(YerothDatabaseTableColumn::GROUPE_DE_PAIE_HR,
                                      YerothERPDatabase::GROUPES_DEMPLOYES_hr,
                                      YerothDatabaseTableColumn::DESIGNATION,
-                                     Current_groupe__dun_employe__LIST.at(k));
+                                     Current_groupe__dun_employe__LIST.at(k).trimmed());
 
-
-            QDEBUG_STRING_OUTPUT_2("queryStr", queryStr);
-;
-            QDEBUG_STRING_OUTPUT_2("Current_groupe__dun_employe__LIST.at(k)",
-                                    Current_groupe__dun_employe__LIST.at(k));
 
             querySize = YerothERPAlertUtils::execQuery(a_sql_query,
                                                        queryStr);
 
-            QDEBUG_STRING_OUTPUT_2_N("querySize", querySize);
-
             if (querySize > 0)
             {
-                a_qsql_record.clear();
-
-                a_qsql_record = a_sql_query.record();
-
-                groupe_de_paie_hr =
-                        GET_SQL_RECORD_DATA(a_qsql_record,
-                                            YerothDatabaseTableColumn::GROUPE_DE_PAIE_HR);
-
-                QDEBUG_STRING_OUTPUT_2("groupe_de_paie_hr", groupe_de_paie_hr);
-
-                if (! groupe_de_paie_hr.isEmpty())
+                while (a_sql_query.next())
                 {
-                    QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
-                    groupe_de_payes.insert(groupe_de_paie_hr);
+                    a_qsql_record.clear();
+
+                    a_qsql_record = a_sql_query.record();
+
+                    groupe_de_paie_hr =
+                    GET_SQL_RECORD_DATA(a_qsql_record,
+                                        YerothDatabaseTableColumn::GROUPE_DE_PAIE_HR);
+
+                    if (! groupe_de_paie_hr.isEmpty())
+                    {
+//                        QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
+                        groupe_de_payes.insert(groupe_de_paie_hr);
+                    }
                 }
             }
         }
