@@ -26,7 +26,7 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
     //ALERT_QUANTITY_TIME_INTERVAL
     QString strQuery("SELECT valeur_configuration FROM configurations");
 
-    strQuery.append(" WHERE nom_configuration = 'PAY_SUPPLIER_HUMAN_RESOURCE_YERITH_ERP_3_TIME_INTERVAL'");
+    strQuery.append(" WHERE nom_configuration = 'HUMAN_RESOURCE_PAY_YERITH_ERP_3_TIME_INTERVAL'");
 
     QSqlQuery query;
 
