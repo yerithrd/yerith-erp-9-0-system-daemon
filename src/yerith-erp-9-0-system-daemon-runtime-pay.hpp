@@ -13,6 +13,9 @@
 #include "src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp"
 
 
+class _PayGroup;
+
+
 class YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP : public YERITH_ERP_SYSTEM_DAEMON_ABSTRACT_ENTITY
 {
     Q_OBJECT
@@ -32,6 +35,7 @@ public slots:
 
 protected:
 
+    _PayGroup *create_a_pay_group(QString a_pay_group_name);
 
     bool calculer___salaire__DES___Employes();
 

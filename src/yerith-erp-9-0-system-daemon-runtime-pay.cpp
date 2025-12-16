@@ -6,6 +6,8 @@
 
 #include "yerith-erp-9-0-system-daemon-runtime-pay.hpp"
 
+#include "entities/yerith-erp-9-0-system-daemon-entity-Pay_Group.hpp"
+
 #include "entities/yerith-erp-9-0-system-daemon-entity-Employe.hpp"
 
 #include "yerith-erp-9-0-system-daemon-config.hpp"
@@ -115,6 +117,44 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
 
     //do_backups() is called every _alertesTimeIntervall ms
     _alertesTimer->start(_alertesTimeIntervall);
+}
+
+
+_PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QString a_pay_group_name)
+{
+    QSqlRecord a_pay_group_qsql_record;
+
+    QSqlQuery a_pay_group_sql_query;
+
+    int querySize = 0;
+
+    _PayGroup *new_pay_group = 0;
+
+
+    QString pay_group_sql_stmt = QString("SELECT * FROM %1 WHERE %2 = '%3';")
+                                    .arg(YerothERPDatabase::GROUPES_DE_PAIE_hr,
+                                         YerothDatabaseTableColumn::DESIGNATION,
+                                         a_pay_group_name);
+
+    a_pay_group_sql_query.clear();
+
+    querySize = YerothERPAlertUtils::execQuery(a_pay_group_sql_query,
+                                               pay_group_sql_stmt);
+
+    if (querySize > 0)
+    {
+        if (a_pay_group_sql_query.next())
+        {
+            a_pay_group_qsql_record.clear();
+
+            a_pay_group_qsql_record = a_pay_group_sql_query.record();
+
+            new_pay_group = new _PayGroup;
+
+
+        }
+    }
+
 }
 
 
