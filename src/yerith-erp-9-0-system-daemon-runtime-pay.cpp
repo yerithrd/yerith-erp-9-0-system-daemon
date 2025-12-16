@@ -118,35 +118,6 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
 }
 
 
-//void Enregistrer___TOUS__LES___Membres_Du_Groupe_Paye(QString groupe_de_paye)
-//{
-//    QString groupe_de_paye_TRIMMED = groupe_de_paye.trimmed();
-//
-//    if (groupe_de_paye_TRIMMED.isEmpty())
-//    {
-//        return ;
-//    }
-//
-//    QString query = QString("SELECT %1 FROM %2 WHERE %3 = %4")
-//                        .arg(YerithDatabaseTableColumn::MEMBRES_DU_GROUPE_db_ID,
-//                             YerithDatabase::GROUPES_DEMPLOYES_hr
-//                             YerithDatabaseTableColumn::DESIGNATION,
-//                             groupe_de_paye_TRIMMED,
-//                             );
-//
-//
-//    QSqlQuery a_sql_query;
-//
-//    querySize = YerothERPAlertUtils::execQuery(a_sql_query,
-//                                               query);
-//
-//    if (querySize)
-//    {
-//
-//    }
-//}
-
-
  void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___groupes_demployes()
 {
     QList<QString> Current_groupe__dun_employe__LIST;
