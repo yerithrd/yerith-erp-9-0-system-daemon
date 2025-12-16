@@ -46,6 +46,8 @@ public:
 
     QSet<_Employee *> set_of_employee;
 
+    QMap<QString, QString> _groupe_demploye__TO__groupe_de_paye;
+
     QMap<QString, QString> _nom_emtreprise__TO__groupe_demploye;
 
 };

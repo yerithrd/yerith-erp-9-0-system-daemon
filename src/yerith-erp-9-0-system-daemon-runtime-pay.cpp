@@ -161,6 +161,8 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
     int querySize = 0;
 
 
+    QString a_group_of_employee;
+
     _Employee *an_employee = 0;
 
     QSetIterator<_Employee *> an_employee_iterator(set_of_employee);
@@ -206,8 +208,17 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
 
                     if (! groupe_de_paie_hr.isEmpty())
                     {
+                        _groupe_demploye__TO__groupe_de_paye
+                            .insert(Current_groupe__dun_employe__LIST.at(k).trimmed(),
+                                    groupe_de_paie_hr);
+//
+//                        a_group_of_employee = Current_groupe__dun_employe__LIST.at(k).trimmed();
+//
+//                        QDEBUG_STRING_OUTPUT_2(a_group_of_employee,
+//                                               groupe_de_paie_hr);
+
 //                        QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
-                        groupe_de_payes.insert(groupe_de_paie_hr);
+//                        groupe_de_payes.insert(groupe_de_paie_hr);
                     }
                 }
             }
