@@ -31,6 +31,7 @@ PRECOMPILED_HEADER  = src/include/yerith-erp-9-0-precompiled-header.hpp
 HEADERS = src/YRIruntimeverification_adaptor.h \
 			src/IYRIruntimeverificationAdaptor_interface.h \
 			src/dbus/YERITH_RUNTIME_VERIFIER.hpp \
+			src/entities/yerith-erp-9-0-system-daemon-entity-Pay_Group.hpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-Employe.hpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.hpp \
 			src/include/yerith-erp-9-0-system-daemon-abstract-entity.hpp \
@@ -50,6 +51,7 @@ HEADERS = src/YRIruntimeverification_adaptor.h \
 SOURCES = src/YRIruntimeverification_adaptor.cpp \
 			src/IYRIruntimeverificationAdaptor_interface.cpp \
 			src/dbus/YERITH_RUNTIME_VERIFIER.cpp \
+			src/entities/yerith-erp-9-0-system-daemon-entity-Pay_Group.cpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-Employe.cpp \
 			src/entities/yerith-erp-9-0-system-daemon-entity-alert-quantity-period-time.cpp \
 			src/include/yerith-erp-9-0-system-daemon-abstract-entity.cpp \

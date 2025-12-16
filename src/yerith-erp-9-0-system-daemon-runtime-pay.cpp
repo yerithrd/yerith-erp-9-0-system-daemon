@@ -118,6 +118,43 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
 }
 
 
+bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Employes()
+{
+    _Employee *an_Employee = 0;
+
+    QSetIterator<_Employee *> an_Emplopye_iterator(set_of_employee);
+
+
+    QString a_salary_group;
+
+    QString a_group_of_employee;
+
+    int k_Max = 0;
+
+
+    while (an_Emplopye_iterator.hasNext())
+    {
+        an_Employee = an_Emplopye_iterator.next();
+
+        if (0 != an_Employee)
+        {
+            k_Max = an_Employee->_groupe_dun_employe__LIST.size();
+
+            for (int k = 0; k < k_Max; ++k)
+            {
+                //a_group_of_employee = _groupe_dun_employe__LIST.at(k);
+
+                //a_salary_group = _groupe_demploye__TO__groupe_de_paye.value(a_group_of_employee);
+
+                //Now calculate salary of an employee with taxes included
+
+            }
+        }
+    }
+
+}
+
+
  void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___groupes_demployes()
 {
     QList<QString> Current_groupe__dun_employe__LIST;
@@ -258,6 +295,8 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
     naviguer___SUR__TOUS___DES___employes();
 
     naviguer___SUR__TOUS___DES___groupes_demployes();
+
+    //calculer___salaire__DES___Employes();
 
 
     if (_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT.isEmpty())

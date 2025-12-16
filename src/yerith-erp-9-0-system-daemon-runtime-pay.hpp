@@ -32,6 +32,9 @@ public slots:
 
 protected:
 
+
+    bool calculer___salaire__DES___Employes();
+
     void naviguer___SUR__TOUS___DES___groupes_demployes();
 
     void naviguer___SUR__TOUS___DES___employes();
