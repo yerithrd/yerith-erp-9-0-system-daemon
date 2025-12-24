@@ -152,6 +152,27 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
             new_pay_group = new _PayGroup;
 
 
+            new_pay_group->montly_pay_date =
+                    GET_SQL_RECORD_DATA(a_pay_group_qsql_record,
+                                        YerothDatabaseTableColumn::JOUR_DE_PAIE_DU_MOIS).toUInt();
+
+            new_pay_group->authorized_site =
+                    GET_SQL_RECORD_DATA(a_pay_group_qsql_record,
+                                        YerothDatabaseTableColumn::LOCALISATION);
+
+            new_pay_group->montly_taxes =
+                    GET_SQL_RECORD_DATA(a_pay_group_qsql_record,
+                                        YerothDatabaseTableColumn::POURCENTAGE_TAXES_IMPOSABLES).toDouble();
+
+            new_pay_group->monthly_amount =
+                    GET_SQL_RECORD_DATA(a_pay_group_qsql_record,
+                                        YerothDatabaseTableColumn::MONTANT_A_PAYER_MENSUEL).toDouble();
+
+            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->montly_taxes",
+                                      new_pay_group->montly_taxes);
+
+            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->monthly_amount",
+                                      new_pay_group->monthly_amount);
         }
     }
 
@@ -164,6 +185,8 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 
     QSetIterator<_Employee *> an_Emplopye_iterator(set_of_employee);
 
+    QDEBUG_STRING_OUTPUT_2_N("number of employees",
+                              set_of_employee.size());
 
     QString a_salary_group;
 
@@ -260,10 +283,10 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
                             .insert(Current_groupe__dun_employe__LIST.at(k).trimmed(),
                                     groupe_de_paie_hr);
 //
-//                        a_group_of_employee = Current_groupe__dun_employe__LIST.at(k).trimmed();
-//
-//                        QDEBUG_STRING_OUTPUT_2(a_group_of_employee,
-//                                               groupe_de_paie_hr);
+                        a_group_of_employee = Current_groupe__dun_employe__LIST.at(k).trimmed();
+
+                        QDEBUG_STRING_OUTPUT_2(a_group_of_employee,
+                                               groupe_de_paie_hr);
 
 //                        QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
 //                        groupe_de_payes.insert(groupe_de_paie_hr);
@@ -336,7 +359,7 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 
     naviguer___SUR__TOUS___DES___groupes_demployes();
 
-    //calculer___salaire__DES___Employes();
+    calculer___salaire__DES___Employes();
 
 
     if (_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT.isEmpty())

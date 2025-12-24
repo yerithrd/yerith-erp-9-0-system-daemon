@@ -10,6 +10,8 @@
 
 const QString YerothDatabaseTableColumn::YRI_Not_PHYSICAL_ASSET_STOCK_DEPARTMENT("yri_Not_PHYSICAL_ASSET_STOCK_department");
 
+const QString YerothDatabaseTableColumn::JOUR_DE_PAIE_DU_MOIS("jour_de_paie_du_mois");
+
 const QString YerothDatabaseTableColumn::IS_SERVICE("is_service");
 
 const QString YerothDatabaseTableColumn::IS_VENTE_EN_GROS("is_vente_en_gros");

@@ -23,6 +23,8 @@ public:
 
     static const QString YRI_Not_PHYSICAL_ASSET_STOCK_DEPARTMENT;
 
+    static const QString JOUR_DE_PAIE_DU_MOIS;
+
     static const QString IS_SERVICE;
 
     static const QString IS_VENTE_EN_GROS;

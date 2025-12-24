@@ -29,7 +29,7 @@ public:
 
     QString _designation;
 
-    QDate montly_pay_date;
+    uint montly_pay_date;
 };
 
 
