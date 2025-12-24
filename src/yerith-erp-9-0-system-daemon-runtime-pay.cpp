@@ -183,21 +183,25 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 {
     _Employee *an_Employee = 0;
 
-    QSetIterator<_Employee *> an_Emplopye_iterator(set_of_employee);
+    QSetIterator<_Employee *> an_Employe_iterator(set_of_employee);
 
     QDEBUG_STRING_OUTPUT_2_N("number of employees",
                               set_of_employee.size());
+
+
+    _PayGroup *a_pay_group = 0;
 
     QString a_salary_group;
 
     QString a_group_of_employee;
 
+
     int k_Max = 0;
 
 
-    while (an_Emplopye_iterator.hasNext())
+    while (an_Employe_iterator.hasNext())
     {
-        an_Employee = an_Emplopye_iterator.next();
+        an_Employee = an_Employe_iterator.next();
 
         if (0 != an_Employee)
         {
@@ -205,11 +209,14 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 
             for (int k = 0; k < k_Max; ++k)
             {
-                //a_group_of_employee = _groupe_dun_employe__LIST.at(k);
+                a_group_of_employee = an_Employee->_groupe_dun_employe__LIST.at(k);
 
-                //a_salary_group = _groupe_demploye__TO__groupe_de_paye.value(a_group_of_employee);
+                a_salary_group = _groupe_demploye__TO__groupe_de_paye.value(a_group_of_employee);
 
                 //Now calculate salary of an employee with taxes included
+                a_pay_group = create_a_pay_group(a_salary_group);
+
+                paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
 
             }
         }

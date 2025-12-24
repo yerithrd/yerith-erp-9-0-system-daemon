@@ -37,6 +37,9 @@ protected:
 
     _PayGroup *create_a_pay_group(QString a_pay_group_name);
 
+
+    bool payer_si_jour_concorde();
+
     bool calculer___salaire__DES___Employes();
 
     void naviguer___SUR__TOUS___DES___groupes_demployes();
@@ -52,6 +55,10 @@ public:
     QSet<QString> groupe_de_payes;
 
     QSet<_Employee *> set_of_employee;
+
+
+    QMap<QString, _PayGroup *> paygroupname__TO__paygroupInstance;
+
 
     QMap<QString, QString> _groupe_demploye__TO__groupe_de_paye;
 
