@@ -131,8 +131,10 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
     _PayGroup *new_pay_group = 0;
 
 
-    QString pay_group_sql_stmt = QString("SELECT * FROM %1 WHERE %2 = '%3';")
+    QString pay_group_sql_stmt = QString("SELECT * FROM %1 WHERE %2 = '%3' AND %4 = '%5';")
                                     .arg(YerothERPDatabase::GROUPES_DE_PAIE_hr,
+                                         YerothDatabaseTableColumn::JOUR_DE_PAIE_DU_MOIS,
+                                         QString::number(GET_CURRENT_DATE.day()),
                                          YerothDatabaseTableColumn::DESIGNATION,
                                          a_pay_group_name);
 
