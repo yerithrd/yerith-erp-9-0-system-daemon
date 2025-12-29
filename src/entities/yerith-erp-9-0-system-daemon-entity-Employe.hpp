@@ -25,13 +25,19 @@ public:
     void set__Employee_GROUP(QString groupe_dun_employe);
 
 
+
     QString _nom_entreprise;
+
+    QMap<QString, double> groupe_dun_employe__TO__payments;
 
     QList<QString> _groupe_dun_employe__LIST;
 
 
 private:
 
+    /* Original encoded string before spliting onto
+     * a list of groups of employees.
+     */
     QString _groupe_dun_employe;
 };
 

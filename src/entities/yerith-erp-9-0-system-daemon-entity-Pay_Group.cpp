@@ -12,9 +12,23 @@
 
 
 
-bool _PayGroup::apply_an_Employee_PAYMENT(_Employee *anEmployee)
+double _PayGroup::apply_an_Employee_PAYMENT(_Employee *anEmployee)
 {
+    if (0 == anEmployee)
+    {
+        return 0.0;
+    }
 
+
+    double montly_amount_real = monthly_amount * montly_taxes;
+
+
+    anEmployee->groupe_dun_employe__TO__payments
+        .insert(_designation,
+                 montly_amount_real);
+
+
+    return montly_amount_real;
 }
 
 

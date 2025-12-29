@@ -24,7 +24,7 @@ public:
 
     YERITH_CLASS_OPERATORS
 
-    bool apply_an_Employee_PAYMENT(_Employee *anEmployee);
+    double apply_an_Employee_PAYMENT(_Employee *anEmployee);
 
     double monthly_amount;
 

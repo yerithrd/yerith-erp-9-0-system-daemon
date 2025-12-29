@@ -185,7 +185,7 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 {
     _Employee *an_Employee = 0;
 
-    QSetIterator<_Employee *> an_Employe_iterator(set_of_employee);
+    QSetIterator<_Employee *> an_Employee_iterator(set_of_employee);
 
     QDEBUG_STRING_OUTPUT_2_N("number of employees",
                               set_of_employee.size());
@@ -201,9 +201,9 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
     int k_Max = 0;
 
 
-    while (an_Employe_iterator.hasNext())
+    while (an_Employee_iterator.hasNext())
     {
-        an_Employee = an_Employe_iterator.next();
+        an_Employee = an_Employee_iterator.next();
 
         if (0 != an_Employee)
         {
@@ -219,6 +219,11 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
                 a_pay_group = create_a_pay_group(a_salary_group);
 
                 paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
+
+                if (0 != a_pay_group)
+                {
+                    a_pay_group->apply_an_Employee_PAYMENT(an_Employee);
+                }
 
             }
         }

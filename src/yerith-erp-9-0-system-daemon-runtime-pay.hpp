@@ -38,7 +38,6 @@ protected:
     _PayGroup *create_a_pay_group(QString a_pay_group_name);
 
 
-    bool payer_si_jour_concorde();
 
     bool calculer___salaire__DES___Employes();
 
