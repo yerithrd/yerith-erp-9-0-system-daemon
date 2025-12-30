@@ -130,7 +130,6 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
 
     _PayGroup *new_pay_group = 0;
 
-
     QString pay_group_sql_stmt = QString("SELECT * FROM %1 WHERE %2 = '%3' AND %4 = '%5';")
                                     .arg(YerothERPDatabase::GROUPES_DE_PAIE_hr,
                                          YerothDatabaseTableColumn::JOUR_DE_PAIE_DU_MOIS,
@@ -178,6 +177,7 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
         }
     }
 
+    return new_pay_group;
 }
 
 
@@ -196,6 +196,9 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
     QString a_salary_group;
 
     QString a_group_of_employee;
+
+
+    double payment_amount = 0.0;
 
 
     int k_Max = 0;
@@ -222,9 +225,8 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 
                 if (0 != a_pay_group)
                 {
-                    a_pay_group->apply_an_Employee_PAYMENT(an_Employee);
+                    payment_amount = a_pay_group->apply_an_Employee_PAYMENT(an_Employee);
                 }
-
             }
         }
     }

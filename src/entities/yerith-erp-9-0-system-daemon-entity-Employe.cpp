@@ -10,6 +10,11 @@
 
 
 
+double _Employee::get_salary_for_today()
+{
+}
+
+
 void _Employee::set__Employee_GROUP(QString groupes_dun_employe)
 {
     _groupe_dun_employe = groupes_dun_employe;

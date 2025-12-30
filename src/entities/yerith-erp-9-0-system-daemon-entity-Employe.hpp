@@ -22,6 +22,8 @@ public:
     YERITH_CLASS_OPERATORS
 
 
+    double get_salary_for_today();
+
     void set__Employee_GROUP(QString groupe_dun_employe);
 
 
