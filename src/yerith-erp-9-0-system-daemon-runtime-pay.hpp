@@ -39,7 +39,7 @@ protected:
 
 
 
-    bool calculer___salaire__DES___Employes();
+    double calculer___salaire__DES___Employes();
 
     void naviguer___SUR__TOUS___DES___groupes_demployes();
 

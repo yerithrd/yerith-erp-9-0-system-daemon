@@ -169,11 +169,11 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
                     GET_SQL_RECORD_DATA(a_pay_group_qsql_record,
                                         YerothDatabaseTableColumn::MONTANT_A_PAYER_MENSUEL).toDouble();
 
-            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->montly_taxes",
-                                      new_pay_group->montly_taxes);
-
-            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->monthly_amount",
-                                      new_pay_group->monthly_amount);
+//            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->montly_taxes",
+//                                      new_pay_group->montly_taxes);
+//
+//            QDEBUG_STRING_OUTPUT_2_N("new_pay_group->monthly_amount",
+//                                      new_pay_group->monthly_amount);
         }
     }
 
@@ -181,8 +181,11 @@ _PayGroup * YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::create_a_pay_group(QSt
 }
 
 
-bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Employes()
+double YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Employes()
 {
+    bool retValue = false;
+
+
     _Employee *an_Employee = 0;
 
     QSetIterator<_Employee *> an_Employee_iterator(set_of_employee);
@@ -218,19 +221,29 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___Emp
 
                 a_salary_group = _groupe_demploye__TO__groupe_de_paye.value(a_group_of_employee);
 
-                //Now calculate salary of an employee with taxes included
-                a_pay_group = create_a_pay_group(a_salary_group);
-
-                paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
+                if (! paygroupname__TO__paygroupInstance.contains(a_salary_group))
+                {
+                    //Now calculate salary of an employee with taxes included
+                    a_pay_group = create_a_pay_group(a_salary_group);
+                }
+                else
+                {
+                    a_pay_group = paygroupname__TO__paygroupInstance.value(a_salary_group);
+                }
 
                 if (0 != a_pay_group)
                 {
+                    paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
+
                     payment_amount = a_pay_group->apply_an_Employee_PAYMENT(an_Employee);
+
+                    retValue = true;
                 }
             }
         }
     }
 
+    return retValue;
 }
 
 
@@ -376,6 +389,35 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
     naviguer___SUR__TOUS___DES___groupes_demployes();
 
     calculer___salaire__DES___Employes();
+
+
+
+    double anEmployeeSalary = 0.0;
+
+
+    _Employee *an_Employee = 0;
+
+    QSetIterator<_Employee *> an_Employee_iterator(set_of_employee);
+
+    while (an_Employee_iterator.hasNext())
+    {
+        anEmployeeSalary = 0.0;
+
+        an_Employee = an_Employee_iterator.next();
+
+        if (0 != an_Employee)
+        {
+            qDebug() << "anEmployee : "
+                     << an_Employee->_nom_entreprise;
+
+            anEmployeeSalary += an_Employee->get_salary_for_today();
+
+            qDebug() << "anEmployee salary : "
+                     << anEmployeeSalary;
+        }
+    }
+
+
 
 
     if (_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT.isEmpty())
