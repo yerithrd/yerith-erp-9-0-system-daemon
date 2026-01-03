@@ -223,8 +223,9 @@ double YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___E
 
                 if (! paygroupname__TO__paygroupInstance.contains(a_salary_group))
                 {
-                    //Now calculate salary of an employee with taxes included
                     a_pay_group = create_a_pay_group(a_salary_group);
+
+                    paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
                 }
                 else
                 {
@@ -233,8 +234,7 @@ double YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___E
 
                 if (0 != a_pay_group)
                 {
-                    paygroupname__TO__paygroupInstance.insert(a_salary_group, a_pay_group);
-
+                    //Now calculate salary of an employee with taxes included
                     payment_amount = a_pay_group->apply_an_Employee_PAYMENT(an_Employee);
 
                     retValue = true;
