@@ -101,8 +101,8 @@ YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTI
                                 GET_SQL_RECORD_DATA(aConfigurationRecord,
                                                     "valeur_configuration");
 
-                              QDEBUG_STRING_OUTPUT_2("_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT *",
-                                                      _DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT);
+//                QDEBUG_STRING_OUTPUT_2("_DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT *",
+//                                        _DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT);
             }
         }
         else
@@ -190,7 +190,7 @@ double YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___E
 
     QSetIterator<_Employee *> an_Employee_iterator(set_of_employee);
 
-    QDEBUG_STRING_OUTPUT_2_N("number of employees",
+    QDEBUG_STRING_OUTPUT_2_N("NUMBER OF EMPLOYEES",
                               set_of_employee.size());
 
 
@@ -314,9 +314,6 @@ double YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::calculer___salaire__DES___E
 //
                         a_group_of_employee = Current_groupe__dun_employe__LIST.at(k).trimmed();
 
-                        QDEBUG_STRING_OUTPUT_2(a_group_of_employee,
-                                               groupe_de_paie_hr);
-
 //                        QDEBUG_STRING_OUTPUT_2("a group of pay", groupe_de_paie_hr);
 //                        groupe_de_payes.insert(groupe_de_paie_hr);
                     }
@@ -407,13 +404,7 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 
         if (0 != an_Employee)
         {
-            qDebug() << "anEmployee : "
-                     << an_Employee->_nom_entreprise;
-
             anEmployeeSalary += an_Employee->get_salary_for_today();
-
-            qDebug() << "anEmployee salary : "
-                     << anEmployeeSalary;
         }
     }
 

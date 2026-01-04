@@ -16,9 +16,6 @@ double _Employee::get_salary_for_today()
 {
     double employee_Salary = 0.0;
 
-    QDEBUG_STRING_OUTPUT_2_N("groupe_dun_employe__TO__payments.size()",
-                              groupe_dun_employe__TO__payments.size());
-
     QMapIterator<QString, double> it(groupe_dun_employe__TO__payments);
 
     while (it.hasNext())
