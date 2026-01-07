@@ -389,33 +389,33 @@ bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::
         return authorized_payment;
     }
 
-
 //    QDEBUG_STRING_OUTPUT_2("GET_CURRENT_STRING_DATE",
 //                            GET_CURRENT_STRING_DATE);
 
-
-    QString query = QString("SELECT %1 FROM %2 WHERE '%3' >= '%4' AND '%5' <= '%6'")
-                        .arg(YerothDatabaseTableColumn::NOM_ENTREPRISE,
-                             YerothERPDatabase::PERIODES_DAPPARTENANCE_GROUPES_DE_PAIE_HR,
+    QString query = QString("SELECT id FROM %1 WHERE %2 = '%3' AND %4 <= '%5' AND '%6' <= %7")
+                        .arg(YerothERPDatabase::PERIODES_DAPPARTENANCE_GROUPES_DE_PAIE_HR,
+                             YerothDatabaseTableColumn::NOM_ENTREPRISE,
+                             an_employee_RECORD->_nom_entreprise,
                              YerothDatabaseTableColumn::DATE_DE_DEBUT_DAPPARTENANCE,
                              DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
                              DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
                              YerothDatabaseTableColumn::DATE_DE_FIN_DAPPARTENANCE);
-
 
 //    QDEBUG_STRING_OUTPUT_2("query",
 //                            query);
 
     QSqlQuery a_sql_query;
 
-
     int querySize = YerothERPAlertUtils::execQuery(a_sql_query,
                                                    query);
 
-//    QDEBUG_STRING_OUTPUT_2_N("querySize",
-//                              querySize);
+    QDEBUG_STRING_OUTPUT_2_N("querySize",
+                              querySize);
 
-    authorized_payment = (querySize > 0);
+    if (querySize > 0)
+    {
+        authorized_payment = true;
+    }
 
     return authorized_payment;
 }
