@@ -370,9 +370,54 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::naviguer___SUR__TOUS___DES___
                 .insert(an_employee_RECORD->_nom_entreprise,
                         Employe_Group);
 
-            set_of_employee.insert(an_employee_RECORD);
+            if (check___validity__OF_EMPLOYEE_Group_Appartenance(an_employee_RECORD))
+            {
+                set_of_employee.insert(an_employee_RECORD);
+            }
         }
     }
+}
+
+
+bool YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::
+        check___validity__OF_EMPLOYEE_Group_Appartenance(_Employee *an_employee_RECORD)
+{
+    bool authorized_payment = false;
+
+    if (0 == an_employee_RECORD)
+    {
+        return authorized_payment;
+    }
+
+
+//    QDEBUG_STRING_OUTPUT_2("GET_CURRENT_STRING_DATE",
+//                            GET_CURRENT_STRING_DATE);
+
+
+    QString query = QString("SELECT %1 FROM %2 WHERE '%3' >= '%4' AND '%5' <= '%6'")
+                        .arg(YerothDatabaseTableColumn::NOM_ENTREPRISE,
+                             YerothERPDatabase::PERIODES_DAPPARTENANCE_GROUPES_DE_PAIE_HR,
+                             YerothDatabaseTableColumn::DATE_DE_DEBUT_DAPPARTENANCE,
+                             DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
+                             DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
+                             YerothDatabaseTableColumn::DATE_DE_FIN_DAPPARTENANCE);
+
+
+//    QDEBUG_STRING_OUTPUT_2("query",
+//                            query);
+
+    QSqlQuery a_sql_query;
+
+
+    int querySize = YerothERPAlertUtils::execQuery(a_sql_query,
+                                                   query);
+
+//    QDEBUG_STRING_OUTPUT_2_N("querySize",
+//                              querySize);
+
+    authorized_payment = (querySize > 0);
+
+    return authorized_payment;
 }
 
 

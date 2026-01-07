@@ -45,6 +45,8 @@ protected:
 
     void naviguer___SUR__TOUS___DES___employes();
 
+    bool check___validity__OF_EMPLOYEE_Group_Appartenance(_Employee *an_employee_RECORD);
+
 
     QString _DIRECTORY_FULL_PATH_FOLDER_FOR_SUPPLIER_PAYMENT;
 
