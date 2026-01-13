@@ -435,8 +435,6 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 
     QSqlQuery a_qsql_query;
 
-    QSqlRecord a_qsql_record;
-
 
     double anEmployeeSalary = 0.0;
 
@@ -451,33 +449,59 @@ void YERITH_ERP_3_0_SYSTEM_DAEMON_RUNTIME_PAY_HPP::do_payments_to_employee()
 
         an_Employee = an_Employee_iterator.next();
 
-//        QDEBUG_STRING_OUTPUT_2("EMPLOYEE", an_Employee->_nom_entreprise);
+        QDEBUG_STRING_OUTPUT_2("EMPLOYEE", an_Employee->_nom_entreprise);
 
         if (0 != an_Employee)
         {
-            anEmployeeSalary += an_Employee->get_salary_for_today();
+            bool an_Employee_ALREADY_PAID = false;
 
-//            QDEBUG_STRING_OUTPUT_2_N("SALARY",
-//                                      anEmployeeSalary);
             a_qsql_query.clear();
 
-            QString query = QString("INSERT into %1 (%2, %3, %4) values ('%5', '%6', '%7')")
-                            .arg(YerothERPDatabase::SALAIRES,
-                                 YerothDatabaseTableColumn::DATE_JOUR_DE_PAYE,
-                                 YerothDatabaseTableColumn::MONTANT_PAYE,
-                                 YerothDatabaseTableColumn::NOM_ENTREPRISE,
-                                 DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
-                                 QString::number(anEmployeeSalary),
-                                 an_Employee->_nom_entreprise);
-
-//            QDEBUG_STRING_OUTPUT_2("query SALAIRES",
-//                                    query);
+            QString query = QString("SELECT id from %1 where %2<='%3' AND %4='%5'")
+            .arg(YerothERPDatabase::SALAIRES,
+                 YerothDatabaseTableColumn::DATE_JOUR_DE_PAYE,
+                 DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
+                 YerothDatabaseTableColumn::NOM_ENTREPRISE,
+                 an_Employee->_nom_entreprise);
 
             int querySize = YerothERPAlertUtils::execQuery(a_qsql_query,
                                                            query);
 
+            QDEBUG_STRING_OUTPUT_2_N("SELECT SALAIRES -- querySize",
+                                      querySize);
+
+            if (querySize > 0)
+            {
+                an_Employee_ALREADY_PAID = true;
+            }
+
+
+            if (! an_Employee_ALREADY_PAID)
+            {
+                anEmployeeSalary += an_Employee->get_salary_for_today();
+
+//            QDEBUG_STRING_OUTPUT_2_N("SALARY",
+//                                      anEmployeeSalary);
+                a_qsql_query.clear();
+
+                QString query = QString("INSERT into %1 (%2, %3, %4) values ('%5', '%6', '%7')")
+                .arg(YerothERPDatabase::SALAIRES,
+                     YerothDatabaseTableColumn::DATE_JOUR_DE_PAYE,
+                     YerothDatabaseTableColumn::MONTANT_PAYE,
+                     YerothDatabaseTableColumn::NOM_ENTREPRISE,
+                     DATE_TO_DB_FORMAT_STRING(GET_CURRENT_DATE),
+                     QString::number(anEmployeeSalary),
+                     an_Employee->_nom_entreprise);
+
+//            QDEBUG_STRING_OUTPUT_2("query SALAIRES",
+//                                    query);
+
+                int querySize = YerothERPAlertUtils::execQuery(a_qsql_query,
+                        query);
+
 //            QDEBUG_STRING_OUTPUT_2_N("INSERT into SALAIRES -- querySize",
 //                                      querySize);
+            }
         }
     }
 
