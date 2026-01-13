@@ -59,6 +59,8 @@ const QString YerothERPDatabase::CLIENTS("clients");
 
 const QString YerothERPDatabase::GROUPES_DE_CLIENTS("groupes_de_clients");
 
+const QString YerothERPDatabase::SALAIRES("SALAIRES");
+
 const QString YerothERPDatabase::FOURNISSEURS("fournisseurs");
 
 const QString YerothERPDatabase::ALERTES("alertes");

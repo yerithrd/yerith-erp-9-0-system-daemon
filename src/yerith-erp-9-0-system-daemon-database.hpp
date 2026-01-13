@@ -140,6 +140,7 @@ public:
     static const QString GROUPES_DE_PAIE_hr;
     static const QString CLIENTS;
     static const QString GROUPES_DE_CLIENTS;
+    static const QString SALAIRES;
     static const QString FOURNISSEURS;
     static const QString ALERTES;
     static const QString REMISES;
