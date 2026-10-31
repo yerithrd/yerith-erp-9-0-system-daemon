@@ -1,6 +1,7 @@
 #!/bin/bash
 
-ln -s /lib/systemd/system/yerith-erp-9-0-system-daemon.service /etc/systemd/system/yerith-erp-9-0-system-daemon.service
+cp /lib/systemd/system/yerith-erp-9-0-system-daemon.service /etc/systemd/system/
+#ln -s /lib/systemd/system/yerith-erp-9-0-system-daemon.service /etc/systemd/system/yerith-erp-9-0-system-daemon.service
 
 systemctl daemon-reload &
 
